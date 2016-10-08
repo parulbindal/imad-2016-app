@@ -79,6 +79,10 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+app.get('/counter', function (req, res) {
+  res.send("fhffhfh");
+});
+
 app.get('/:articleName',function(req, res){
     //articleName = article-one
     var articleName = req.params.articleName;
@@ -99,11 +103,11 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
-var counter = 0;
-app.get('/counter',function(req,res){
-    counter= counter + 1;
-   res.send("fhfhffh"); 
-});
+// var counter = 0;
+// app.get('/counter',function(req,res){
+//     counter= counter + 1;
+//   res.send("fhfhffh"); 
+// });
 
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
